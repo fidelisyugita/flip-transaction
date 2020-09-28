@@ -5,19 +5,16 @@ import {connect} from 'react-redux';
 import {
   ScrollView,
   Text,
-  Image,
   View,
   SafeAreaView,
-  TextInput,
   TouchableOpacity,
-  FlatList,
   StyleSheet,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 import TransactionActions from '../../Redux/TransactionRedux';
 
-import {Colors, Fonts, Metrics, Images, AppStyles} from '../../Themes';
+import {Colors, Fonts, AppStyles} from '../../Themes';
 import I18n from '../../I18n';
 import {Scale} from '../../Transforms';
 
@@ -31,9 +28,7 @@ class TransactionDetailScreen extends Component {
 
   render() {
     const {item} = this.state;
-    const {navigation, transactions} = this.props;
-    const data = [...transactions];
-    // const item = data[0] || {};
+    const {navigation} = this.props;
 
     return (
       <SafeAreaView style={[AppStyles.flex1, AppStyles.backgroundSilver]}>
@@ -47,11 +42,7 @@ class TransactionDetailScreen extends Component {
               <TouchableOpacity
                 // onPress={() => navigation.pop()}
                 style={{padding: Scale(8)}}>
-                <Icon
-                  name="copy"
-                  size={Fonts.size.medium}
-                  color={Colors.bloodOrange}
-                />
+                <Icon name="copy1" size={Scale(15)} color={Colors.orange} />
               </TouchableOpacity>
             </View>
 
@@ -77,8 +68,8 @@ class TransactionDetailScreen extends Component {
                 {item.sender_bank}
               </Text>
               <Icon
-                name="long-arrow-alt-right"
-                size={Fonts.size.xl}
+                name="arrowright"
+                size={Scale(19)}
                 style={{marginHorizontal: Scale(5)}}
               />
               <Text style={[Fonts.style.xlBold, Fonts.style.textUppercase]}>

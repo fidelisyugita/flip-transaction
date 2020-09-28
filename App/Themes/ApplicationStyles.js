@@ -56,7 +56,7 @@ const ApplicationStyles = {
     position: 'absolute',
   },
   shadow: {
-    backgroundColor: Colors.silver,
+    backgroundColor: Colors.snow,
     shadowColor: Colors.charcoal,
     shadowOffset: {
       width: 0,
@@ -68,7 +68,7 @@ const ApplicationStyles = {
     elevation: 5,
   },
   shadowSmall: {
-    backgroundColor: Colors.silver,
+    backgroundColor: Colors.snow,
     shadowColor: Colors.charcoal,
     shadowOffset: {
       width: 0,

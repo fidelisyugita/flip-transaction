@@ -48,7 +48,7 @@ export const getTransactionsRequest = (state, {data}) => {
   });
 };
 export const getTransactionsSuccess = (state, {payload}) => {
-  DropDownHolder.alert('success', I18n.t('successDefault'), undefined);
+  // DropDownHolder.alert('success', I18n.t('successDefault'), undefined);
 
   let newTransactions = [...state.transactions];
   if (payload.length > 0) newTransactions = payload;

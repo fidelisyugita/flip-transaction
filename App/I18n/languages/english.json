@@ -35,4 +35,13 @@
   "transferMessage": "Berita Transfer",
   "uniqueCode": "Kode Unik",
   "createdAt": "Waktu Dibuat",
+  
+  "searchPlaceholder": "Cari nama, bank, atau nominal",
+  "sorting": "Urutkan",
+  "SORTING": "URUTKAN",
+  "checking": "Pengecekan",
+  "success": "Berhasil",
+  "name": "Nama",
+  "newestDate": "Tanggal Terbaru",
+  "oldestDate": "Tanggal Terlama",
 }
