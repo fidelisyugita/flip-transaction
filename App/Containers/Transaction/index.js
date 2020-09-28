@@ -140,10 +140,12 @@ class TransactionScreen extends Component {
           <View style={[AppStyles.row, AppStyles.alignCenter]}>
             <Icon name="search1" size={Scale(21)} color={Colors.steel} />
             <TextInput
+              placeholderTextColor={Colors.steel}
+              maxLength={20}
               value={searchText}
               placeholder={I18n.t('searchPlaceholder')}
               onChangeText={(text) => this.setState({searchText: text})}
-              style={[Fonts.style.small]}
+              style={[Fonts.style.small, {marginHorizontal: Scale(5)}]}
             />
           </View>
           <TouchableOpacity
@@ -206,5 +208,6 @@ const styles = StyleSheet.create({
     marginBottom: Scale(7),
     borderRadius: Scale(5),
     paddingHorizontal: Scale(10),
+    height: Scale(60),
   },
 });
