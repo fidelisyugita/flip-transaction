@@ -1,80 +1,84 @@
-import Fonts from './Fonts'
-import Metrics from './Metrics'
-import Colors from './Colors'
+import Fonts from './Fonts';
+import Metrics from './Metrics';
+import Colors from './Colors';
+
+import {Scale} from '../Transforms';
 
 // This file is for a reusable grouping of Theme items.
 // Similar to an XML fragment layout in Android
 
 const ApplicationStyles = {
-  screen: {
-    mainContainer: {
-      flex: 1,
-      backgroundColor: Colors.transparent
-    },
-    backgroundImage: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      bottom: 0,
-      right: 0
-    },
-    container: {
-      flex: 1,
-      paddingTop: Metrics.baseMargin,
-      backgroundColor: Colors.transparent
-    },
-    section: {
-      margin: Metrics.section,
-      padding: Metrics.baseMargin
-    },
-    sectionText: {
-      ...Fonts.style.normal,
-      paddingVertical: Metrics.doubleBaseMargin,
-      color: Colors.snow,
-      marginVertical: Metrics.smallMargin,
-      textAlign: 'center'
-    },
-    subtitle: {
-      color: Colors.snow,
-      padding: Metrics.smallMargin,
-      marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin
-    },
-    titleText: {
-      ...Fonts.style.h2,
-      fontSize: 14,
-      color: Colors.text
-    }
+  backgroundSilver: {
+    backgroundColor: Colors.silver,
   },
-  darkLabelContainer: {
-    padding: Metrics.smallMargin,
-    paddingBottom: Metrics.doubleBaseMargin,
-    borderBottomColor: Colors.border,
-    borderBottomWidth: 1,
-    marginBottom: Metrics.baseMargin
+  backgroundSnow: {
+    backgroundColor: Colors.snow,
   },
-  darkLabel: {
-    fontFamily: Fonts.type.bold,
-    color: Colors.snow
+  borderTop1: {
+    borderTopWidth: Scale(1),
+    borderColor: Colors.silver,
   },
-  groupContainer: {
-    margin: Metrics.smallMargin,
+  borderTop2: {
+    borderTopWidth: Scale(2),
+    borderColor: Colors.silver,
+  },
+  flex1: {
+    flex: 1,
+  },
+  flex2: {
+    flex: 2,
+  },
+  row: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
   },
-  sectionTitle: {
-    ...Fonts.style.h4,
-    color: Colors.coal,
-    backgroundColor: Colors.ricePaper,
-    padding: Metrics.smallMargin,
-    marginTop: Metrics.smallMargin,
-    marginHorizontal: Metrics.baseMargin,
-    borderWidth: 1,
-    borderColor: Colors.ember,
+  justifyCenter: {
+    justifyContent: 'center',
+  },
+  justifyBetween: {
+    justifyContent: 'space-between',
+  },
+  justifyEvenly: {
+    justifyContent: 'space-evenly',
+  },
+  justifyEnd: {
+    justifyContent: 'flex-end',
+  },
+  alignCenter: {
     alignItems: 'center',
-    textAlign: 'center'
-  }
-}
+  },
+  alignEnd: {
+    alignItems: 'flex-end',
+  },
+  alignSelfCenter: {
+    alignSelf: 'center',
+  },
+  positionAbsolute: {
+    position: 'absolute',
+  },
+  shadow: {
+    backgroundColor: Colors.silver,
+    shadowColor: Colors.charcoal,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
 
-export default ApplicationStyles
+    elevation: 5,
+  },
+  shadowSmall: {
+    backgroundColor: Colors.silver,
+    shadowColor: Colors.charcoal,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+};
+
+export default ApplicationStyles;
